@@ -4,6 +4,7 @@ Repositório para a disciplina Linguagens I.
 # Desenvolvedor:
 - Gustavo Consoleti Ramirez de Souza
 
+[commnet]: <> (Comentário no Markdown)
 
 #Linguagens e Frameworks:
 - Pyhon
