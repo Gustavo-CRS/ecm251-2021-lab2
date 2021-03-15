@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         // System.out.println("Hello, World!");
         Conta c1; // cria uma referência para um objeto Conta
-        c1 = new Conta("Biridin", 2978); // instancia um objeto conta
+        c1 = new Conta(); // instancia um objeto conta
         
 
         c1.depositar(300);

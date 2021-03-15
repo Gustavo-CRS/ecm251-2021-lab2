@@ -6,25 +6,9 @@ public class Conta {
     private int numero;
     private double saldo;
 
-    //construtor da classe
-    public Conta(String nomeCliente, double saldoInicial){
-        this.saldo = saldoInicial;
-        this.cliente = new Cliente(nomeCliente);
-
-    }
-
     // métodos
     public void visualizarSaldo() {
         System.out.println("Saldo:R$ " + this.saldo);
-    }
-
-    public void setSaldo(double novoSaldo){
-        this.saldo = novoSaldo;
-
-    }
-
-    public double getSaldo() {
-        return this.saldo;
     }
 
     public boolean sacar(double valor) {
@@ -46,15 +30,18 @@ public class Conta {
     public boolean transferirDinheiro(Conta destino, double valor) {
         if (this.sacar(valor)) {
             destino.depositar(valor);
-
+            
         }
         return false;
 
     }
-
     @Override
     public String toString() {
-        return "Conta{" + "cliente=" + cliente.toString() + ", saldo=" + saldo + ", numero=" + numero + '}';
+        return "Conta{" +
+                "cliente=" + cliente.toString() +
+                ", saldo=" + saldo +
+                ", numero=" + numero +
+                '}';
     }
 
 }
