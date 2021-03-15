@@ -2,13 +2,16 @@ package souza.ramirez.consoleti.gustavo;
 
 import java.util.Scanner;
 
+
+
 public class Sistema {
     private boolean executarSistema;
     private Scanner scanner;
     private Conta conta;
+    
+    
 
-
-    //métodos
+    // métodos
     public void executar() {
         int opcao;
         while (executarSistema) {
@@ -21,32 +24,58 @@ public class Sistema {
 
     private void avaliarOpcao(int opcao) {
         switch (opcao) {
-            case 0:
+        case 0:
             System.out.println("Obrigado por ter utilizado o sistema!");
             this.executarSistema = false;
-                
-                break;
-            case 1:
+
+            break;
+        case 1:
             System.out.println("Saldo: R$" + this.conta.getSaldo());
             break;
 
-            case 2:
+        case 2:
             System.out.println("Informe um valor para depositar: ");
             double valorParaDepositar = scanner.nextDouble();
             this.conta.depositar(valorParaDepositar);
             System.out.println("Operação realizada com sucesso!");
             break;
-        
-            default:
+
+        case 3:
+            System.out.println("Informe o valor para sacar: ");
+            double valorParaSacar = scanner.nextDouble();
+            if (this.conta.sacar(valorParaSacar)) {
+                System.out.println("Operação realizada com sucesso!");
+
+            } else {
+                System.out.println("Algo deu errado: Saldo");
+            }
+        case 5:
+            System.out.println("Nome do título a pagar:");
+            String nomeTitulo = scanner.next();
+            System.out.println("Valor do título:");
+            double valorTitulo = scanner.nextDouble();
+            System.out.println("Valor do juros por dia:");
+            double valorJurosPorDia = scanner.nextDouble();
+            System.out.println("Informe a data de vencimento (aaaa-mm-dd):");
+            String dataVencimentoTitulo = scanner.next();
+            Titulo titulo = new Titulo(valorTitulo, nomeTitulo, valorJurosPorDia, dataVencimentoTitulo);
+            if (this.conta.sacar(titulo.getValorPagamento())) {
+                System.out.println("Operação Realizada com Sucesso!");
+            } else {
+                System.out.println("Não foi possível realizar a operação");
+            }
+            break;
+
+        default:
             System.out.println("Opção ainda não implementada!");
-                break;
+            break;
         }
     }
 
-    public Sistema(){
+    public Sistema() {
         this.executarSistema = true;
-        this.scanner = new Scanner(System.in); //Cria um scanner para o teclado (entrada padrão)
-        this.conta = new Conta("Luigi",12345,1000);
+        this.scanner = new Scanner(System.in); // Cria um scanner para o teclado (entrada padrão)
+        this.conta = new Conta("Luigi", 12345, 1000);
     }
 
     private void exibirMenu() {
@@ -61,5 +90,4 @@ public class Sistema {
 
     }
 
-    
 }
