@@ -5,10 +5,19 @@ public class Conta {
     private Cliente cliente;
     private int numero;
     private double saldo;
+    
 
     // métodos
-    public void visualizarSaldo() {
-        System.out.println("Saldo:R$ " + this.saldo);
+    public Conta(String cliente, int numero, double saldo) {
+        this.cliente = new Cliente(cliente);
+        this.numero = numero;
+        this.saldo = saldo; 
+        
+    }
+
+
+    public double getSaldo() {
+        return this.saldo;
     }
 
     public boolean sacar(double valor) {
