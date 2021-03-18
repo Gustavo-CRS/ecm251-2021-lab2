@@ -8,8 +8,11 @@ public class validadorCPF {
     private static final int TAMANHO_CPF = 11;
 
     public static boolean validarCpf(String cpf) {
+        // retira . e - do cpf
         cpf = cpf.replace(".", "");
         cpf = cpf.replace("-", "");
+
+
         // Valida se o tamanho do CPF está de acordo com o esperado
         if (cpf.length() != TAMANHO_CPF)
             return false;
