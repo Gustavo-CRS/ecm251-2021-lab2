@@ -1,0 +1,4 @@
+skins,300
+periféricos,100
+teste,700
+qualquer coisa,2000
