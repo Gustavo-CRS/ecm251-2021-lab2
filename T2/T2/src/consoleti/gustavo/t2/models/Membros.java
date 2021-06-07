@@ -1,8 +1,10 @@
 package consoleti.gustavo.t2.models;
 
+
 import consoleti.gustavo.t2.enums.Funcoes;
 
 public abstract class  Membros {
+    
     /**
      * Atributos da classe
      */
