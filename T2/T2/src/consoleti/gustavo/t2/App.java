@@ -4,15 +4,20 @@
  * 
  */
 
-
 package consoleti.gustavo.t2;
 
 import consoleti.gustavo.t2.controller.Sistema;
 
 
-
 public class App {
+
+    /**
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
-       Sistema.run();
+        Sistema.run();
+        
+
     }
 }
