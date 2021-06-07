@@ -3,19 +3,7 @@ package consoleti.gustavo.t2.menu;
 public class Menus {
 
 
-    void exibirMenuSistema(){
-    System.out.println(
-        "MENU DE CADASTRO:" + 
-        "\n" +
-        "1 - Mobile Member\n" + 
-        "2 - Heavy Lifter\n" + 
-        "3 - Script Guy\n" + 
-        "4 - Big Brother\n" +
-        "9 - Sair"
-        );
-    }
-
-    void exibirMenuCadastro(){
+    public void exibirMenuSistema(){
         System.out.println(
             "MENU DO SISTEMA:" +
             "\n" +
@@ -27,6 +15,23 @@ public class Menus {
             "5 - Postar mensagens\n" + 
             "9 - Sair"
             );
+        
+        
+        
+    }
+
+    public void exibirMenuCadastro(){
+        System.out.println(
+
+            "MENU DE CADASTRO:" + 
+            "\n" +
+            "1 - Mobile Member\n" + 
+            "2 - Heavy Lifter\n" + 
+            "3 - Script Guy\n" + 
+            "4 - Big Brother\n" +
+            "9 - Sair"
+  
+        );
         
 
 
