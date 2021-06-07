@@ -1,9 +1,11 @@
 package consoleti.gustavo.t2.models;
 
 
+import consoleti.gustavo.t2.Interfaces.IApresentacao;
+import consoleti.gustavo.t2.Interfaces.IPostarMensagem;
 import consoleti.gustavo.t2.enums.Funcoes;
 
-public abstract class  Membros {
+public abstract class  Membros implements IApresentacao, IPostarMensagem {
     
     /**
      * Atributos da classe
@@ -81,7 +83,7 @@ public abstract class  Membros {
      */
     @Override
     public String toString() {
-        return "Membro [email=" + email + ", funcao=" + funcao + ", nome=" + nome + "]";
+        return "Membro [nome= " + nome + ", funcao= " + funcao + ", email= " + email + "]";
     }
     
 
