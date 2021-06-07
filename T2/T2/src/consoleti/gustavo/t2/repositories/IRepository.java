@@ -7,7 +7,7 @@ import consoleti.gustavo.t2.models.Membros;
 public interface IRepository {
     void adicionarMembro(Membros membro);
     void removerMembros(Membros membro);
-    ArrayList<Membros> getMembros(Membros membro);
+    ArrayList<Membros> getMembros();
 
 
 }

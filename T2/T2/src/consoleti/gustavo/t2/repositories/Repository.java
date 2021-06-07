@@ -7,14 +7,7 @@ import consoleti.gustavo.t2.models.Membros;
 public class Repository implements IRepository {
     private ArrayList<Membros> listaMembros = new ArrayList<Membros>();
 
-    /**
-     * método para pegar a lista de membros.
-     * 
-     * @return a lista de membros
-     */
-    public ArrayList<Membros> getListaMembros() {
-        return listaMembros;
-    }
+    
 
     /**
      * método para adicionar novos membros.
@@ -44,9 +37,10 @@ public class Repository implements IRepository {
      * @return a lista de membros
      */
     @Override
-    public ArrayList<Membros> getMembros(Membros membro) {
+    public ArrayList<Membros> getMembros() {
 
         return listaMembros;
     }
+
 
 }
