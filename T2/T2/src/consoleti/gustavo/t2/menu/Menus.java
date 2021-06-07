@@ -1,19 +1,27 @@
 package consoleti.gustavo.t2.menu;
 
+import consoleti.gustavo.t2.enums.Horarios;
+
 public class Menus {
 
 
-    public void exibirMenuSistema(){
+    
+    /** 
+     * @param jornadaTrabalho
+     */
+    public void exibirMenuSistema(Horarios jornadaTrabalho){
         System.out.println(
-            "MENU DO SISTEMA:" +
+            "\nMENU DO SISTEMA:" +
             "\n" +
-            "Pressione:\n" +
+            "Jornada de trabalho atual: " + jornadaTrabalho +
+            "\nPressione:\n" +
             "1 - Cadastrar novo membro\n" + 
             "2 - Apresentar membros cadastrados\n" + 
             "3 - Remover membro\n" + 
             "4 - Trocar jornada de trabalho\n" + 
             "5 - Postar mensagens\n" + 
-            "9 - Sair"
+            "9 - Sair\n" 
+            
             );
         
         
