@@ -90,6 +90,6 @@ public abstract class Membros implements IApresentacao, IPostarMensagem {
      */
     @Override
     public String toString() {
-        return "Membro {Nome = " + nome + ", Função = " + funcao + ", E-mail = " + email + "}";
+        return "Membro {Nome=" + nome + ",Função=" + funcao + ",E-mail=" + email + "}";
     }
 }

@@ -2,9 +2,9 @@ package consoleti.gustavo.t2.controller;
 
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 
+import consoleti.gustavo.t2.enums.Funcoes;
 import consoleti.gustavo.t2.models.Membros;
 
 public class FileService {
@@ -14,46 +14,21 @@ public class FileService {
         FileService.arquivo = arquivo;
     }
 
-    public static void modificarCSV(ArrayList<Membros> membros, FileWriter file) throws IOException {
-        // deletarCSV(file);
-        for (Membros membro : membros) {
-            String escrita = tratarString(membro.toString());
-            
-            try {
-                file.write(escrita + "\n");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            
-
-        }
-    }
-
-    public static void deletarCSV(File file) {
-        try {
-            file.delete();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     public static void salvarEmCSV(ArrayList<Membros> membros) {
-        File file = new File("nome_super_vergonhoso.csv");
+        File file = new File("arquivo_super_Secreto_nao_abrir.csv");
         FileWriter fileWriter = null;
         try {
             fileWriter = new FileWriter(file);
             fileWriter.write("nome;funcao;email\n");
-            
+
             for (Membros membro : membros) {
-                String escrita = tratarString(membro.toString());
+                String escrita = tratarString(membro.getNome(), membro.getFuncao(), membro.getEmail());
                 try {
                     fileWriter.write(escrita + "\n");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
-            
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -65,29 +40,13 @@ public class FileService {
             }
         }
 
-
     }
 
-    public static FileWriter criarCSV(String nomeArquivo) {
-        File file = new File(nomeArquivo);
-        try {
-            FileWriter fw = new FileWriter(file);
-            // FileWriter file = new FileWriter(nomeArquivo);
-            fw.write("nome;funcao;email\n");
-            return fw;
-        } catch (IOException e) {
-            System.out.println("Deu merda");
-            e.printStackTrace();
-        }
-        return arquivo;
-    }
-
-    public static String tratarString(String membro) {
+    public static String tratarString(String membro, Funcoes funcoes, String string) {
         // Membro [Nome = darth, Função = HeavyLifters, E-mail = darth@gmail.com]
-        membro.split("=");
-        return membro;
-    }
+        String exibirMembro = membro + ";" + funcoes + ";" + string;
 
-    
+        return exibirMembro;
+    }
 
 }
