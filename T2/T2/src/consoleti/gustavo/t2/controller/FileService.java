@@ -14,6 +14,10 @@ public class FileService {
         FileService.arquivo = arquivo;
     }
 
+    
+    /** 
+     * @param membros
+     */
     public static void salvarEmCSV(ArrayList<Membros> membros) {
         File file = new File("arquivo_super_Secreto_nao_abrir.csv");
         FileWriter fileWriter = null;
@@ -42,6 +46,13 @@ public class FileService {
 
     }
 
+    
+    /** 
+     * @param membro
+     * @param funcoes
+     * @param string
+     * @return String
+     */
     public static String tratarString(String membro, Funcoes funcoes, String string) {
         // Membro [Nome = darth, Função = HeavyLifters, E-mail = darth@gmail.com]
         String exibirMembro = membro + ";" + funcoes + ";" + string;
