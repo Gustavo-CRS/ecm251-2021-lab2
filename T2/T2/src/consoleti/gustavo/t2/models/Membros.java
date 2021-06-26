@@ -1,12 +1,11 @@
 package consoleti.gustavo.t2.models;
 
-
 import consoleti.gustavo.t2.Interfaces.IApresentacao;
 import consoleti.gustavo.t2.Interfaces.IPostarMensagem;
 import consoleti.gustavo.t2.enums.Funcoes;
 
-public abstract class  Membros implements IApresentacao, IPostarMensagem {
-    
+public abstract class Membros implements IApresentacao, IPostarMensagem {
+
     /**
      * Atributos da classe
      */
@@ -16,6 +15,7 @@ public abstract class  Membros implements IApresentacao, IPostarMensagem {
 
     /**
      * Construtor dos atributos da classe Membro
+     * 
      * @param email
      * @param nome
      * @param funcao
@@ -28,6 +28,7 @@ public abstract class  Membros implements IApresentacao, IPostarMensagem {
 
     /**
      * Getter do email do membro
+     * 
      * @return String
      */
     public String getEmail() {
@@ -36,6 +37,7 @@ public abstract class  Membros implements IApresentacao, IPostarMensagem {
 
     /**
      * Setter do email do membro
+     * 
      * @param email
      * @return String
      */
@@ -45,6 +47,7 @@ public abstract class  Membros implements IApresentacao, IPostarMensagem {
 
     /**
      * Getter do nome do membro
+     * 
      * @return String
      */
     public String getNome() {
@@ -53,6 +56,7 @@ public abstract class  Membros implements IApresentacao, IPostarMensagem {
 
     /**
      * Setter do nome do membro
+     * 
      * @param nome
      * @return String
      */
@@ -62,6 +66,7 @@ public abstract class  Membros implements IApresentacao, IPostarMensagem {
 
     /**
      * Getter do funcao do membro
+     * 
      * @return Funcoes
      */
     public Funcoes getFuncao() {
@@ -70,6 +75,7 @@ public abstract class  Membros implements IApresentacao, IPostarMensagem {
 
     /**
      * Setter da funcao do membro
+     * 
      * @param funcao
      * @return Funcoes
      */
@@ -79,14 +85,11 @@ public abstract class  Membros implements IApresentacao, IPostarMensagem {
 
     /**
      * Printa os atributos do membro
+     * 
      * @return String
      */
     @Override
     public String toString() {
-        return "Membro [nome= " + nome + ", funcao= " + funcao + ", email= " + email + "]";
+        return "Membro {Nome = " + nome + ", Função = " + funcao + ", E-mail = " + email + "}";
     }
-    
-
-
-    
 }

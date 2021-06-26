@@ -1,6 +1,5 @@
 package consoleti.gustavo.t2.controller;
 
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -25,9 +24,9 @@ public class Sistema {
         
         System.out.println("\f\f\f\f\f\f\f\f\f\f\f\f");// limpa o console
 
-        String nomeCSV = "arquivo_super_Secreto_nao_abrir.csv";
+        // String nomeCSV = "arquivo_super_Secreto_nao_abrir.csv";
         
-       FileWriter file = FileService.criarCSV(nomeCSV);
+        // FileWriter file = FileService.criarCSV(nomeCSV);
         System.out.println("Bem Vindo ao sistema da MAsK_S0c13ty");
 
         while (rodar) {
@@ -38,7 +37,8 @@ public class Sistema {
                     Membros membro = cadastroMembro();
                     if (membro != null) {
                         repository.adicionarMembro(membro);
-                        file.modificarCSV(repository.getMembros(),file );
+                        // FileService.modificarCSV(repository.getMembros(), file);
+                        FileService.salvarEmCSV(repository.getMembros());
                     }
                     break;
 
@@ -52,11 +52,12 @@ public class Sistema {
                     for (int i = 0; i < repository.getMembros().size(); i++) {
                         System.out.print("[" + (i + 1) + "]" + " ");
                         repository.getMembros().get(i).apresentar();
-                        file.modificarCSV(repository.getMembros(),file);
+                        // FileService.modificarCSV(repository.getMembros(), file);
                     }
                     System.out.println("Digite o índice do membro a ser removido do sistema.");
                     int indice = scanner.nextInt();
                     repository.removerMembros(repository.getMembros().get(indice - 1));
+                    FileService.salvarEmCSV(repository.getMembros());
                     break;
 
                 case 4:

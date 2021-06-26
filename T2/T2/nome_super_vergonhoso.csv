@@ -1,0 +1,3 @@
+nome;funcao;email
+Membro {Nome = membro1, Função = MobileMembers, E-mail = email1}
+Membro {Nome = membro3, Função = ScriptGuys, E-mail = email3}
