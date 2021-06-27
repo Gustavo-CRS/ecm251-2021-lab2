@@ -3,21 +3,25 @@ package consoleti.gustavo.t2.models;
 import consoleti.gustavo.t2.enums.*;
 
 public class BigBrother extends Membros {
-
     
+    /**
+     * Construtor da classe mãe.
+     */
     public BigBrother(String email, String nome, Funcoes funcao) {
         super(email, nome, funcao);
-       
     }
 
+    /**
+     * Implementação do método apresentar() para a classe dos Big Brothers.
+     */
     @Override
     public void apresentar() {
         System.out.println(toString());
-        
     }
-
     
-    /** 
+    /**
+     * Implementação do método mensagem() para a classe dos Big Brothers.
+     * 
      * @param horario
      */
     @Override
@@ -32,11 +36,5 @@ public class BigBrother extends Membros {
                 System.out.println("...");
                 break;
         }
-        
     }
-
-    
-   
-
-    
 }

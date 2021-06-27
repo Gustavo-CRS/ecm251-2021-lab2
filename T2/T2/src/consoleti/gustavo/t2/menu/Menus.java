@@ -4,9 +4,10 @@ import consoleti.gustavo.t2.enums.Horarios;
 
 public class Menus {
 
-
-    
     /** 
+     * Método responsável por exibir o menu do sistema (informações sobre 
+     * a jornada de trabalho atual e recursos implementados).
+     * 
      * @param jornadaTrabalho
      */
     public void exibirMenuSistema(Horarios jornadaTrabalho){
@@ -21,13 +22,13 @@ public class Menus {
             "4 - Trocar jornada de trabalho\n" + 
             "5 - Postar mensagens\n" + 
             "9 - Sair\n" 
-            
             );
-        
-        
-        
     }
 
+    /**
+     * Método responsável por exibir o menu de cadastro de novos membros.
+     * 
+     */
     public void exibirMenuCadastro(){
         System.out.println(
 
@@ -38,13 +39,6 @@ public class Menus {
             "3 - Script Guy\n" + 
             "4 - Big Brother\n" +
             "9 - Sair"
-  
         );
-        
-
-
     }
-
-
-    
 }

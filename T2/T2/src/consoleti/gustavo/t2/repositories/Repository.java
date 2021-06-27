@@ -5,12 +5,11 @@ import java.util.ArrayList;
 import consoleti.gustavo.t2.models.Membros;
 
 public class Repository implements IRepository {
+
     private ArrayList<Membros> listaMembros = new ArrayList<Membros>();
 
-    
-
     /**
-     * método para adicionar novos membros.
+     * método responsável por adicionar novos membros.
      * 
      * @param membro
      */
@@ -21,7 +20,7 @@ public class Repository implements IRepository {
     }
 
     /**
-     * método para remover membros.
+     * Método responsável por remover membros.
      * 
      * @param membro
      */
@@ -32,7 +31,7 @@ public class Repository implements IRepository {
     }
 
     /**
-     * método para pegar a lista de membros.
+     * Método que retorna a lista de membros.
      * 
      * @return a lista de membros
      */
@@ -41,6 +40,4 @@ public class Repository implements IRepository {
 
         return listaMembros;
     }
-
-
 }

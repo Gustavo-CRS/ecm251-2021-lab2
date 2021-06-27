@@ -5,19 +5,24 @@ import consoleti.gustavo.t2.enums.Horarios;
 
 public class ScriptGuy extends Membros {
 
+    /**
+     * Construtor da classe mãe.
+     */
     public ScriptGuy(String email, String nome, Funcoes funcao) {
         super(email, nome, funcao);
-        
     }
 
+    /**
+     * Implementação do método apresentar() para a classe dos Script Guys.
+     */
     @Override
     public void apresentar() {
         System.out.println(toString());
-        
     }
 
-    
-    /** 
+    /**
+     * Implementação do método mensagem() para a classe dos Script Guys.
+     * 
      * @param horario
      */
     @Override
@@ -31,8 +36,6 @@ public class ScriptGuy extends Membros {
             case EXTRA:
                 System.out.println("QU3Ro_S3us_r3curs0s.py");
                 break;
-        }
-        
+        }   
     }
-    
 }

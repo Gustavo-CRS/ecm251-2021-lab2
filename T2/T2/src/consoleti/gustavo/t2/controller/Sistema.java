@@ -9,24 +9,22 @@ import consoleti.gustavo.t2.models.*;
 import consoleti.gustavo.t2.repositories.*;
 
 public class Sistema {
-    
+
     final private static Menus menu = new Menus();
     final protected static IRepository repository = new Repository();
     final private static Scanner scanner = new Scanner(System.in);
     private static Horarios jornadaTrabalho = Horarios.NORMAL;
 
     /**
+     * Esse método é chamado pela App.java e inicializa o sistema.
+     * 
      * @throws IOException
      */
     public static void run() throws IOException {
 
         boolean rodar = true;
-        
-        System.out.println("\f\f\f\f\f\f\f\f\f\f\f\f");// limpa o console
 
-        // String nomeCSV = "arquivo_super_Secreto_nao_abrir.csv";
-        
-        // FileWriter file = FileService.criarCSV(nomeCSV);
+        System.out.println("\f\f\f\f\f\f\f\f\f\f\f\f");// limpa o console
         System.out.println("Bem Vindo ao sistema da MAsK_S0c13ty");
 
         while (rodar) {
@@ -37,7 +35,6 @@ public class Sistema {
                     Membros membro = cadastroMembro();
                     if (membro != null) {
                         repository.adicionarMembro(membro);
-                        // FileService.modificarCSV(repository.getMembros(), file);
                         FileService.salvarEmCSV(repository.getMembros());
                     }
                     break;
@@ -52,7 +49,6 @@ public class Sistema {
                     for (int i = 0; i < repository.getMembros().size(); i++) {
                         System.out.print("[" + (i + 1) + "]" + " ");
                         repository.getMembros().get(i).apresentar();
-                        // FileService.modificarCSV(repository.getMembros(), file);
                     }
                     System.out.println("Digite o índice do membro a ser removido do sistema.");
                     int indice = scanner.nextInt();
@@ -71,7 +67,6 @@ public class Sistema {
                             break;
                         default:
                             break;
-
                     }
                     break;
 
@@ -82,6 +77,7 @@ public class Sistema {
                     break;
 
                 case 9:
+                    System.out.println("\nArquivo CSV salvo com sucesso!");
                     System.out.println("\nVocê está saindo do sistema.");
                     rodar = false;
                     break;
@@ -93,7 +89,7 @@ public class Sistema {
     }
 
     /**
-     * método para cadastrar membros
+     * Método responsável por cadastrar novos membros.
      * 
      * @return Membros
      */
