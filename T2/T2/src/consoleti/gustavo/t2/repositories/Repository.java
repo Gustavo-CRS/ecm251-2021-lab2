@@ -9,7 +9,7 @@ public class Repository implements IRepository {
     private ArrayList<Membros> listaMembros = new ArrayList<Membros>();
 
     /**
-     * método responsável por adicionar novos membros.
+     * Método responsável por adicionar novos membros.
      * 
      * @param membro
      */
