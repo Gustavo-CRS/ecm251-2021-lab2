@@ -7,14 +7,14 @@ import consoleti.gustavo.t2.enums.Funcoes;
 public abstract class Membros implements IApresentacao, IPostarMensagem {
 
     /**
-     * Atributos da classe
+     * Atributos da classe.
      */
     private String email;
     private String nome;
     private Funcoes funcao;
 
     /**
-     * Construtor dos atributos da classe Membro
+     * Construtor dos atributos da classe Membro.
      * 
      * @param email
      * @param nome
@@ -27,7 +27,7 @@ public abstract class Membros implements IApresentacao, IPostarMensagem {
     }
 
     /**
-     * Getter do email do membro
+     * Getter do email do membro.
      * 
      * @return String
      */
@@ -84,7 +84,7 @@ public abstract class Membros implements IApresentacao, IPostarMensagem {
     }
 
     /**
-     * Printa os atributos do membro
+     * Exibe os atributos do membro
      * 
      * @return String
      */

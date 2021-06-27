@@ -8,14 +8,21 @@ import consoleti.gustavo.t2.enums.Funcoes;
 import consoleti.gustavo.t2.models.Membros;
 
 public class FileService {
+
     static FileWriter arquivo;
 
+    /**
+     * Construtor da classe.
+     */
     public FileService(FileWriter arquivo) {
         FileService.arquivo = arquivo;
     }
 
     
     /** 
+     * Método que recebe a lista de membros cadastrados no sistema 
+     * e salva essas informações em um arquivo CSV, com nome pré-estabelecido.
+     * 
      * @param membros
      */
     public static void salvarEmCSV(ArrayList<Membros> membros) {
@@ -48,10 +55,13 @@ public class FileService {
 
     
     /** 
+     * Método responsavel por realizar o tratamento da String a ser
+     * salva no arquivo CSV.
+     * 
      * @param membro
      * @param funcoes
      * @param string
-     * @return String
+     * @return String formatada, pronta para gravar em CSV
      */
     public static String tratarString(String membro, Funcoes funcoes, String string) {
         // Membro [Nome = darth, Função = HeavyLifters, E-mail = darth@gmail.com]
@@ -59,5 +69,4 @@ public class FileService {
 
         return exibirMembro;
     }
-
 }
