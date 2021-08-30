@@ -49,13 +49,13 @@ public class FileService {
     
     /** 
      * @param membro
-     * @param funcoes
-     * @param string
+     * @param funcao
+     * @param email
      * @return String
      */
-    public static String tratarString(String membro, Funcoes funcoes, String string) {
+    public static String tratarString(String membro, Funcoes funcao, String email) {
         // Membro [Nome = darth, Função = HeavyLifters, E-mail = darth@gmail.com]
-        String exibirMembro = membro + ";" + funcoes + ";" + string;
+        String exibirMembro = membro + ";" + funcao + ";" + email;
 
         return exibirMembro;
     }
